@@ -74,34 +74,38 @@ public class BillService {
         Bill bill = new Bill();
         bill.setCliente(clienteOpt.get());
         bill.setPayed(false);
-        bill.setTotal(0.0); 
+        bill.setTotal(0.0); // Inicializa el total
 
-        for (BillRequestDTO.ServiceItem item : dto.getServices()) { 
+        double total = 0.0;
+
+        for (BillRequestDTO.ServiceItem item : dto.getServices()) {
             Optional<VeterinaryService> serviceOpt = veterinaryServiceRepository.findById(item.getServiceId());
-            System.out.println("SE ENCUENTRA SERVICIO?");
-            System.out.println("Service Id " + item.getServiceId());
-            System.out.println("Vet Id " + serviceOpt);
             if (serviceOpt.isPresent()) {
                 VeterinaryService service = serviceOpt.get();
 
-                // Crear un BillDetail para cada servicio
+                // Calcular subtotal
+                int lineSubtotal = item.getQuantity() * service.getPrice();
+                total += lineSubtotal;
+
+                // Crear detalle de factura
                 BillDetail detail = new BillDetail();
-                detail.setService(service); 
-                detail.setQuantity(item.getQuantity()); 
-                detail.setSubtotal(item.getSubtotal().intValue());
+                detail.setService(service);
+                detail.setQuantity(item.getQuantity());
+                detail.setSubtotal(lineSubtotal); // Calculado, no viene del DTO
 
                 bill.addDetail(detail);
             } else {
-                System.out.println("NO SE ENCUENTRA SERVICIO?");
+                System.out.println("Servicio no encontrado: ID " + item.getServiceId());
             }
         }
 
+        bill.setTotal(total);
         billRepository.save(bill);
         return Optional.of(bill);
     }
 
     public Optional<BillSummaryDTO> getBillSummary(Long billId) {
-        Optional<Bill> billOpt = billRepository.findById(billId); 
+        Optional<Bill> billOpt = billRepository.findById(billId);
         if (billOpt.isEmpty())
             return Optional.empty();
 
@@ -119,7 +123,7 @@ public class BillService {
             s.setQuantity(detail.getQuantity());
             double lineSubtotal = detail.getQuantity() * detail.getService().getPrice();
             s.setSubtotal(lineSubtotal);
-            subtotal[0] += lineSubtotal; 
+            subtotal[0] += lineSubtotal;
             return s;
         }).toList();
 

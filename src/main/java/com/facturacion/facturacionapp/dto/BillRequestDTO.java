@@ -25,7 +25,7 @@
         public static class ServiceItem {
             private Long serviceId;
             private Integer quantity;
-            private Double subtotal;
+            // private Double subtotal;
         }
 
         
