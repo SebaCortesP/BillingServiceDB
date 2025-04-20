@@ -14,11 +14,11 @@
     @Setter
     public class BillRequestDTO {
         private Long clientId;
-        private List<ServiceItem> services; // Cambié el nombre para representar los detalles del servicio
+        private List<ServiceItem> services;
 
 
         public BillRequestDTO() {
-            // Constructor sin parámetros
+
         }
 
         @Getter @Setter
