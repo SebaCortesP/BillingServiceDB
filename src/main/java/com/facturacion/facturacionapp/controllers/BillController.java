@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -78,6 +79,15 @@ public class BillController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Error al generar el resumen de la factura: " + e.getMessage());
         }
+    }
+
+    @PutMapping("/bills/{id}/pay")
+    public ResponseEntity<String> payBill(@PathVariable Long id) {
+        Optional<String> response = billService.payBill(id);
+
+        return response
+            .map(msg -> ResponseEntity.ok(msg))
+            .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body("Factura no encontrada."));
     }
 
 }

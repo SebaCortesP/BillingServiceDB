@@ -35,6 +35,26 @@ public class BillService {
         return billRepository.findAll();
     }
 
+    public Optional<String> payBill(Long id) {
+        Optional<Bill> billOpt = billRepository.findById(id);
+        
+        if (billOpt.isEmpty()) {
+            return Optional.of("La factura con ID " + id + " no existe.");
+        }
+    
+        Bill bill = billOpt.get();
+    
+        if (bill.isPayed()) {
+            return Optional.of("La factura con ID " + id + " ya se encuentra pagada. No se realizará ninguna acción.");
+        }
+    
+        bill.setPayed(true);
+        billRepository.save(bill);
+    
+        return Optional.of("La factura con ID " + id + " ha sido marcada como pagada.");
+    }
+    
+
     public Optional<Bill> getBillById(Long id) {
         return billRepository.findById(id);
     }
@@ -137,5 +157,7 @@ public class BillService {
 
         return Optional.of(summary);
     }
+
+
 
 }
