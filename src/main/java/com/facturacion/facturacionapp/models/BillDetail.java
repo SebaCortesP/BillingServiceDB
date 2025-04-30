@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
@@ -25,7 +27,7 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "bill_details")
-public class BillDetail {
+public class BillDetail extends RepresentationModel<BillDetail>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

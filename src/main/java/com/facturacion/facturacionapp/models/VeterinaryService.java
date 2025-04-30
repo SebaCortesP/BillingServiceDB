@@ -1,6 +1,9 @@
 package com.facturacion.facturacionapp.models;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import org.springframework.hateoas.RepresentationModel;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +20,7 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor 
 @AllArgsConstructor
 @Table(name = "veterinary_services")
-public class VeterinaryService {
+public class VeterinaryService extends RepresentationModel<VeterinaryService>{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

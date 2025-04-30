@@ -2,6 +2,8 @@ package com.facturacion.facturacionapp.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
@@ -27,7 +29,7 @@ import lombok.AllArgsConstructor;
 @Setter
 @Entity
 @Table(name = "bills")
-public class Bill {
+public class Bill extends RepresentationModel<Bill>{
 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
