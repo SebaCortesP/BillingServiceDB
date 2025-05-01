@@ -71,45 +71,6 @@ public class BillController {
         }
     }
 
-    // @PostMapping("/bills/store")
-    // public ResponseEntity<?> createBill(@RequestBody @Valid BillRequestDTO dto) {
-    // try {
-    // Optional<Bill> created = billService.createBillWithDetails(dto);
-    // if (created.isEmpty()) {
-    // return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-    // .body("Cliente no encontrado o IDs de servicios inválidos.");
-    // }
-    // return ResponseEntity.status(HttpStatus.CREATED).body(created.get());
-    // } catch (Exception e) {
-    // return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-    // .body("Error al crear la factura: " + e.getMessage());
-    // }
-    // }
-
-    // @GetMapping("/bills/{id}/summary")
-    // public ResponseEntity<?> getBillSummary(@PathVariable Long id) {
-    // try {
-    // Optional<BillSummaryDTO> summaryOpt = billService.getBillSummary(id);
-    // if (summaryOpt.isEmpty()) {
-    // return ResponseEntity.status(HttpStatus.NOT_FOUND)
-    // .body("Factura no encontrada con ID: " + id);
-    // }
-    // return ResponseEntity.ok(summaryOpt.get());
-    // } catch (Exception e) {
-    // return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-    // .body("Error al generar el resumen de la factura: " + e.getMessage());
-    // }
-    // }
-
-    // @PutMapping("/bills/{id}/pay")
-    // public ResponseEntity<String> payBill(@PathVariable Long id) {
-    // Optional<String> response = billService.payBill(id);
-
-    // return response
-    // .map(msg -> ResponseEntity.ok(msg))
-    // .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body("Factura no
-    // encontrada."));
-    // }
 
     @PostMapping("/bills/store")
     public ResponseEntity<?> createBill(@RequestBody @Valid BillRequestDTO dto) {
@@ -182,5 +143,7 @@ public class BillController {
         payResource.add(linkTo(methodOn(BillController.class).getBillById(id)).withRel("bill"));
         return ResponseEntity.ok(payResource);
     }
+
+    
 
 }
