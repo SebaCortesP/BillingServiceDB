@@ -1,9 +1,6 @@
 HELP.md
 .gradle
-build/
 !gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
 Wallet_OZARZE8P1JOTCP4N/
 logs/
 

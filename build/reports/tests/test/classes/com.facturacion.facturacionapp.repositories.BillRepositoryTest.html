@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - BillRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>BillRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.facturacion.facturacionapp.repositories.html">com.facturacion.facturacionapp.repositories</a> &gt; BillRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.616s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">storeClientAndBillTest()</td>
+<td class="success">0.616s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2025-05-01T15:10:45.567-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] b.t.a.o.j.DataJpaTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [BillRepositoryTest]: using SpringBootContextLoader
+2025-05-01T15:10:45.569-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.facturacion.facturacionapp.repositories.BillRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-05-01T15:10:45.569-04:00  INFO 16740 --- [facturacionapp] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.facturacion.facturacionapp.repositories.BillRepositoryTest]: BillRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-01T15:10:45.571-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] b.t.a.o.j.DataJpaTestContextBootstrapper : Using ContextCustomizerFactory implementations for test class [BillRepositoryTest]: [OnFailureConditionReportContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ObservabilityContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, PropertyMappingContextCustomizerFactory, WebDriverContextCustomizerFactory, ImportsContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, HttpGraphQlTesterContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, MockitoContextCustomizerFactory, TestRestTemplateContextCustomizerFactory, WebTestClientContextCustomizerFactory, DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory, BeanOverrideContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+2025-05-01T15:10:45.589-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] b.t.a.o.j.DataJpaTestContextBootstrapper : Using ContextCustomizers for test class [BillRepositoryTest]: [OnFailureConditionReportContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer, ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer, DynamicPropertiesContextCustomizer]
+2025-05-01T15:10:45.612-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] ssPathScanningCandidateComponentProvider : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\BillingServiceDBTest\build\classes\java\main\com\facturacion\facturacionapp\FacturacionappApplication.class]
+2025-05-01T15:10:45.612-04:00  INFO 16740 --- [facturacionapp] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.facturacion.facturacionapp.FacturacionappApplication for test class com.facturacion.facturacionapp.repositories.BillRepositoryTest
+2025-05-01T15:10:45.614-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .s.t.c.u.TestContextSpringFactoriesUtils : Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+2025-05-01T15:10:45.615-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] b.t.a.o.j.DataJpaTestContextBootstrapper : Using TestExecutionListeners for test class [BillRepositoryTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, BeanOverrideTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, CommonCachesTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener, MockitoResetTestExecutionListener]
+2025-05-01T15:10:45.615-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test class: class [BillRepositoryTest], class annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T15:10:45.617-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.facturacion.facturacionapp.repositories.BillRepositoryTest
+2025-05-01T15:10:45.648-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.boot.ApplicationEnvironment          : Activating profiles []
+2025-05-01T15:10:45.651-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'spring.application.name' in PropertySource 'configurationProperties' with value of type String
+2025-05-01T15:10:45.652-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.logback.rollingpolicy.max-file-size' in PropertySource 'configurationProperties' with value of type String
+2025-05-01T15:10:45.652-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.logback.rollingpolicy.max-history' in PropertySource 'configurationProperties' with value of type String
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-05-01T15:10:45.666-04:00  INFO 16740 --- [facturacionapp] [    Test worker] c.f.f.repositories.BillRepositoryTest    : Starting BillRepositoryTest using Java 21.0.6 with PID 16740 (started by sebas in C:\Users\sebas\DuocUC\Full Stack\Semana 8\BillingServiceDBTest)
+2025-05-01T15:10:45.666-04:00  INFO 16740 --- [facturacionapp] [    Test worker] c.f.f.repositories.BillRepositoryTest    : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-05-01T15:10:45.666-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.boot.SpringApplication               : Loading source class com.facturacion.facturacionapp.FacturacionappApplication
+2025-05-01T15:10:45.669-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7acfcfc4
+2025-05-01T15:10:45.671-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2025-05-01T15:10:45.671-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2025-05-01T15:10:45.973-04:00  INFO 16740 --- [facturacionapp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-01T15:10:45.976-04:00  INFO 16740 --- [facturacionapp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-01T15:10:45.993-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2025-05-01T15:10:45.994-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.facturacion.facturacionapp'. Automatic @Repository and @Entity scanning is enabled.
+2025-05-01T15:10:45.994-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.facturacion.facturacionapp.
+2025-05-01T15:10:46.014-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\BillingServiceDBTest\build\classes\java\main\com\facturacion\facturacionapp\repositories\BillDetailRepository.class]
+2025-05-01T15:10:46.015-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\BillingServiceDBTest\build\classes\java\main\com\facturacion\facturacionapp\repositories\BillRepository.class]
+2025-05-01T15:10:46.015-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\BillingServiceDBTest\build\classes\java\main\com\facturacion\facturacionapp\repositories\ClientRepository.class]
+2025-05-01T15:10:46.015-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\BillingServiceDBTest\build\classes\java\main\com\facturacion\facturacionapp\repositories\VeterinaryServiceRepository.class]
+2025-05-01T15:10:46.099-04:00  INFO 16740 --- [facturacionapp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 4 JPA repository interfaces.
+2025-05-01T15:10:46.203-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.context.ImportsContextCustomizer$ImportsCleanupPostProcessor'
+2025-05-01T15:10:46.204-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+2025-05-01T15:10:46.205-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'emBeanDefinitionRegistrarPostProcessor'
+2025-05-01T15:10:46.205-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor'
+2025-05-01T15:10:46.235-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2025-05-01T15:10:46.236-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2025-05-01T15:10:46.236-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+2025-05-01T15:10:46.238-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2025-05-01T15:10:46.238-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2025-05-01T15:10:46.240-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2025-05-01T15:10:46.240-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+2025-05-01T15:10:46.241-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jdbcConnectionDetailsHikariBeanPostProcessor'
+2025-05-01T15:10:46.241-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2025-05-01T15:10:46.242-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2025-05-01T15:10:46.242-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2025-05-01T15:10:46.251-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.test.context.support.internalDynamicPropertyRegistrarBeanInitializer'
+2025-05-01T15:10:46.252-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2025-05-01T15:10:46.252-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+2025-05-01T15:10:46.278-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'transactionAttributeSource'
+2025-05-01T15:10:46.282-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'transactionInterceptor'
+2025-05-01T15:10:46.282-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'transactionInterceptor' via factory method to bean named 'transactionAttributeSource'
+2025-05-01T15:10:46.305-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.transaction.config.internalTransactionAdvisor' via factory method to bean named 'transactionAttributeSource'
+2025-05-01T15:10:46.306-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.transaction.config.internalTransactionAdvisor' via factory method to bean named 'transactionInterceptor'
+2025-05-01T15:10:46.315-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dataSourceScriptDatabaseInitializer'
+2025-05-01T15:10:46.316-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration'
+2025-05-01T15:10:46.317-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dataSource'
+2025-05-01T15:10:46.317-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari'
+2025-05-01T15:10:46.318-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+2025-05-01T15:10:46.318-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2025-05-01T15:10:46.333-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jdbcConnectionDetails'
+2025-05-01T15:10:46.333-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration'
+2025-05-01T15:10:46.334-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jdbcConnectionDetails' via factory method to bean named 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+2025-05-01T15:10:46.335-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dataSource' via factory method to bean named 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+2025-05-01T15:10:46.335-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dataSource' via factory method to bean named 'jdbcConnectionDetails'
+2025-05-01T15:10:46.551-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
+2025-05-01T15:10:46.555-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dataSourceScriptDatabaseInitializer' via factory method to bean named 'dataSource'
+2025-05-01T15:10:46.555-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dataSourceScriptDatabaseInitializer' via factory method to bean named 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
+2025-05-01T15:10:46.568-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'entityManagerFactory'
+2025-05-01T15:10:46.568-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration'
+2025-05-01T15:10:46.569-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties'
+2025-05-01T15:10:46.573-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties'
+2025-05-01T15:10:46.575-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'dataSource'
+2025-05-01T15:10:46.575-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties'
+2025-05-01T15:10:46.575-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7e514482'
+2025-05-01T15:10:46.575-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties'
+2025-05-01T15:10:46.581-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hikariPoolDataSourceMetadataProvider'
+2025-05-01T15:10:46.582-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration'
+2025-05-01T15:10:46.588-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'entityManagerFactoryBuilder'
+2025-05-01T15:10:46.589-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpaVendorAdapter'
+2025-05-01T15:10:46.610-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'entityManagerFactoryBuilder' via factory method to bean named 'jpaVendorAdapter'
+2025-05-01T15:10:46.615-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'persistenceManagedTypes'
+2025-05-01T15:10:46.616-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'persistenceManagedTypes' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7e514482'
+2025-05-01T15:10:46.616-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'persistenceManagedTypes' via factory method to bean named 'org.springframework.context.annotation.AnnotationConfigApplicationContext@7acfcfc4'
+2025-05-01T15:10:46.631-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'entityManagerFactory' via factory method to bean named 'entityManagerFactoryBuilder'
+2025-05-01T15:10:46.631-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'entityManagerFactory' via factory method to bean named 'persistenceManagedTypes'
+2025-05-01T15:10:46.671-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2025-05-01T15:10:46.728-04:00  INFO 16740 --- [facturacionapp] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-01T15:10:46.861-04:00  INFO 16740 --- [facturacionapp] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-01T15:10:46.918-04:00  INFO 16740 --- [facturacionapp] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-01T15:10:47.124-04:00  INFO 16740 --- [facturacionapp] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-01T15:10:47.173-04:00  INFO 16740 --- [facturacionapp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-01T15:10:47.180-04:00  WARN 16740 --- [facturacionapp] [    Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-05-01T15:10:48.748-04:00  INFO 16740 --- [facturacionapp] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5c3e7128
+2025-05-01T15:10:48.751-04:00  INFO 16740 --- [facturacionapp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-01T15:10:48.966-04:00  WARN 16740 --- [facturacionapp] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-01T15:10:49.071-04:00  INFO 16740 --- [facturacionapp] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 19.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-01T15:10:50.757-04:00  INFO 16740 --- [facturacionapp] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-01T15:10:50.761-04:00  INFO 16740 --- [facturacionapp] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-01T15:10:50.767-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'facturacionappApplication'
+2025-05-01T15:10:50.768-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration'
+2025-05-01T15:10:50.770-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration'
+2025-05-01T15:10:50.771-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration'
+2025-05-01T15:10:50.771-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2025-05-01T15:10:50.773-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$PersistenceManagedTypesConfiguration'
+2025-05-01T15:10:50.773-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'transactionManager'
+2025-05-01T15:10:50.802-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration'
+2025-05-01T15:10:50.803-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration'
+2025-05-01T15:10:50.804-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpaSharedEM_entityManagerFactory'
+2025-05-01T15:10:50.869-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.jpa.util.JpaMetamodelCacheCleanup'
+2025-05-01T15:10:50.870-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.jpa.repository.support.JpaEvaluationContextExtension'
+2025-05-01T15:10:50.873-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.named-queries#0'
+2025-05-01T15:10:50.876-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.ClientRepository.fragments#0'
+2025-05-01T15:10:50.878-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'clientRepository'
+2025-05-01T15:10:50.896-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpaMappingContext'
+2025-05-01T15:10:50.897-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .c.JpaMetamodelMappingContextFactoryBean : Initializing JpaMetamodelMappingContext…
+2025-05-01T15:10:50.965-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .c.JpaMetamodelMappingContextFactoryBean : Finished initializing JpaMetamodelMappingContext
+2025-05-01T15:10:51.051-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T15:10:51.118-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T15:10:51.218-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.facturacion.facturacionapp.repositories.ClientRepository…
+2025-05-01T15:10:51.252-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T15:10:51.295-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.facturacion.facturacionapp.repositories.ClientRepository.
+2025-05-01T15:10:51.297-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.named-queries#1'
+2025-05-01T15:10:51.299-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.BillDetailRepository.fragments#0'
+2025-05-01T15:10:51.300-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'billDetailRepository'
+2025-05-01T15:10:51.302-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T15:10:51.323-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.facturacion.facturacionapp.repositories.BillDetailRepository…
+2025-05-01T15:10:51.323-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T15:10:51.329-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.facturacion.facturacionapp.repositories.BillDetailRepository.
+2025-05-01T15:10:51.330-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.named-queries#2'
+2025-05-01T15:10:51.331-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.VeterinaryServiceRepository.fragments#0'
+2025-05-01T15:10:51.331-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'veterinaryServiceRepository'
+2025-05-01T15:10:51.333-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T15:10:51.334-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.facturacion.facturacionapp.repositories.VeterinaryServiceRepository…
+2025-05-01T15:10:51.334-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T15:10:51.341-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.facturacion.facturacionapp.repositories.VeterinaryServiceRepository.
+2025-05-01T15:10:51.342-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.named-queries#3'
+2025-05-01T15:10:51.343-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.BillRepository.fragments#0'
+2025-05-01T15:10:51.344-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'billRepository'
+2025-05-01T15:10:51.346-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T15:10:51.347-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.facturacion.facturacionapp.repositories.BillRepository…
+2025-05-01T15:10:51.347-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T15:10:51.353-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.facturacion.facturacionapp.repositories.BillRepository.
+2025-05-01T15:10:51.354-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'data-jpa.repository-aot-processor#0'
+2025-05-01T15:10:51.367-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateConfiguration'
+2025-05-01T15:10:51.368-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jdbcTemplate'
+2025-05-01T15:10:51.368-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties'
+2025-05-01T15:10:51.370-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jdbcTemplate' via factory method to bean named 'dataSource'
+2025-05-01T15:10:51.371-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jdbcTemplate' via factory method to bean named 'spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties'
+2025-05-01T15:10:51.382-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.NamedParameterJdbcTemplateConfiguration'
+2025-05-01T15:10:51.383-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'namedParameterJdbcTemplate'
+2025-05-01T15:10:51.383-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'namedParameterJdbcTemplate' via factory method to bean named 'jdbcTemplate'
+2025-05-01T15:10:51.392-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration'
+2025-05-01T15:10:51.392-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.JdbcClientAutoConfiguration'
+2025-05-01T15:10:51.393-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jdbcClient'
+2025-05-01T15:10:51.393-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jdbcClient' via factory method to bean named 'namedParameterJdbcTemplate'
+2025-05-01T15:10:51.396-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration'
+2025-05-01T15:10:51.397-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration'
+2025-05-01T15:10:51.397-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration'
+2025-05-01T15:10:51.398-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration'
+2025-05-01T15:10:51.398-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration'
+2025-05-01T15:10:51.399-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration'
+2025-05-01T15:10:51.399-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'transactionTemplate'
+2025-05-01T15:10:51.400-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'transactionTemplate' via factory method to bean named 'transactionManager'
+2025-05-01T15:10:51.403-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration'
+2025-05-01T15:10:51.405-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration'
+2025-05-01T15:10:51.405-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'testEntityManager'
+2025-05-01T15:10:51.406-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'testEntityManager' via factory method to bean named 'entityManagerFactory'
+2025-05-01T15:10:51.416-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147483647
+2025-05-01T15:10:51.416-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'springBootLoggingLifecycle'
+2025-05-01T15:10:51.419-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   DataSourceAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: io.r2dbc.spi.ConnectionFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.PooledDataSourceConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.PooledDataSourceAvailable PooledDataSource found supported DataSource; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.ExplicitType @ConditionalOnProperty (spring.datasource.type) did not find property 'type' (DataSourceAutoConfiguration.PooledDataSourceCondition)
+      - @ConditionalOnMissingBean (types: javax.sql.DataSource,javax.sql.XADataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.PooledDataSourceConfiguration#jdbcConnectionDetails matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.jdbc.JdbcConnectionDetails; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceConfiguration.Hikari matched:
+      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
+      - @ConditionalOnProperty (spring.datasource.type=com.zaxxer.hikari.HikariDataSource) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceInitializationConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer,org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration matched:
+      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate', 'org.springframework.transaction.TransactionManager' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   HibernateJpaAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean', 'jakarta.persistence.EntityManager', 'org.hibernate.engine.spi.SessionImplementor' (OnClassCondition)
+
+   HibernateJpaConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   JdbcClientAutoConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate; SearchStrategy: all) found a single bean 'namedParameterJdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.simple.JdbcClient; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JdbcTemplateAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   JdbcTemplateConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.jdbc.core.JdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,jakarta.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactoryBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#jpaVendorAdapter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.JpaVendorAdapter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#transactionManager matched:
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration.PersistenceManagedTypesConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,jakarta.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration.PersistenceManagedTypesConfiguration#persistenceManagedTypes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.persistenceunit.PersistenceManagedTypes; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaRepositoriesAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.data.jpa.repository.JpaRepository' (OnClassCondition)
+      - @ConditionalOnProperty (spring.data.jpa.repositories.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found bean 'dataSource'; @ConditionalOnMissingBean (types: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean,org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NamedParameterJdbcTemplateConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.JdbcTemplate; SearchStrategy: all) found a single bean 'jdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NoOpCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration NONE cache type (CacheCondition)
+
+   SqlInitializationAutoConfiguration matched:
+      - @ConditionalOnProperty (spring.sql.init.enabled) matched (OnPropertyCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever @ConditionalOnProperty (spring.sql.init.mode=never) did not find property 'mode' (SqlInitializationAutoConfiguration.SqlInitializationModeCondition)
+
+   TestEntityManagerAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.persistence.EntityManagerFactory' (OnClassCondition)
+
+   TestEntityManagerAutoConfiguration#testEntityManager matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found bean 'transactionManager'; @ConditionalOnMissingBean (types: org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
+      - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) found a single bean 'transactionManager' (OnBeanCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration#transactionTemplate matched:
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.support.TransactionOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   Cache2kCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
+
+   CacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) did not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+
+   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
+      Did not match:
+         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+
+   CaffeineCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
+
+   CouchbaseCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   DataSourceAutoConfiguration.EmbeddedDatabaseConfiguration:
+      Did not match:
+         - EmbeddedDataSource spring.datasource.url is set (DataSourceAutoConfiguration.EmbeddedDatabaseCondition)
+
+   DataSourceCheckpointRestoreConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.crac.Resource' (OnClassCondition)
+
+   DataSourceConfiguration.Dbcp2:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
+
+   DataSourceConfiguration.Generic:
+      Did not match:
+         - @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (OnPropertyCondition)
+
+   DataSourceConfiguration.OracleUcp:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'oracle.ucp.jdbc.PoolDataSourceImpl' (OnClassCondition)
+
+   DataSourceConfiguration.Tomcat:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
+
+   DataSourceJmxConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.jmx.enabled=true) found different value in property 'enabled' (OnPropertyCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.OracleUcpPoolDataSourceMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'oracle.ucp.jdbc.PoolDataSource' (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.TomcatDataSourcePoolMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration#transactionManager:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found beans of type 'org.springframework.transaction.TransactionManager' transactionManager (OnBeanCondition)
+
+   FlywayAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.flywaydb.core.Flyway' (OnClassCondition)
+
+   GenericCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration unknown cache type (CacheCondition)
+
+   HazelcastCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   InfinispanCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
+
+   JCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
+
+   JpaBaseConfiguration.JpaWebConfiguration:
+      Did not match:
+         - not a servlet web application (OnWebApplicationCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+
+   JpaRepositoriesAutoConfiguration#entityManagerFactoryBootstrapExecutorCustomizer:
+      Did not match:
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on JpaRepositoriesAutoConfiguration.BootstrapExecutorCondition.LazyBootstrapMode @ConditionalOnProperty (spring.data.jpa.repositories.bootstrap-mode=lazy) found different value in property 'bootstrap-mode'; NestedCondition on JpaRepositoriesAutoConfiguration.BootstrapExecutorCondition.DeferredBootstrapMode @ConditionalOnProperty (spring.data.jpa.repositories.bootstrap-mode=deferred) found different value in property 'bootstrap-mode' (JpaRepositoriesAutoConfiguration.BootstrapExecutorCondition)
+
+   LiquibaseAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'liquibase.change.DatabaseChange' (OnClassCondition)
+
+   R2dbcInitializationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'io.r2dbc.spi.ConnectionFactory', 'org.springframework.r2dbc.connection.init.DatabasePopulator' (OnClassCondition)
+
+   RedisCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   SimpleCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration unknown cache type (CacheCondition)
+
+   TestDatabaseAutoConfiguration#dataSource:
+      Did not match:
+         - @ConditionalOnProperty (spring.test.database.replace=AUTO_CONFIGURED) found different value in property 'replace' (OnPropertyCondition)
+
+   TestDatabaseAutoConfiguration#embeddedDataSourceBeanFactoryPostProcessor:
+      Did not match:
+         - @ConditionalOnProperty (spring.test.database.replace=ANY) found different value in property 'replace' (OnPropertyCondition)
+
+   TestDatabaseAutoConfiguration#nonTestEmbeddedDataSourceBeanFactoryPostProcessor:
+      Did not match:
+         - @ConditionalOnProperty (spring.test.database.replace=NON_TEST) found different value in property 'replace' (OnPropertyCondition)
+
+   TransactionAutoConfiguration#transactionalOperator:
+      Did not match:
+         - @ConditionalOnSingleCandidate (types: org.springframework.transaction.ReactiveTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.AspectJTransactionManagementConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.transaction.aspectj.AbstractTransactionAspect; SearchStrategy: all) did not find any beans of type org.springframework.transaction.aspectj.AbstractTransactionAspect (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.JdkDynamicAutoProxyConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.aop.proxy-target-class=false) did not find property 'proxy-target-class' (OnPropertyCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration
+
+
+
+2025-05-01T15:10:51.423-04:00  INFO 16740 --- [facturacionapp] [    Test worker] c.f.f.repositories.BillRepositoryTest    : Started BillRepositoryTest in 5.803 seconds (process running for 14.086)
+2025-05-01T15:10:51.424-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 35, missCount = 2, failureCount = 0]
+2025-05-01T15:10:51.426-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 36, missCount = 2, failureCount = 0]
+2025-05-01T15:10:51.428-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test method: class [BillRepositoryTest], method [storeClientAndBillTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T15:10:51.438-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] t.c.t.TransactionalTestExecutionListener : Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT] found for test class [com.facturacion.facturacionapp.repositories.BillRepositoryTest] and test method [storeClientAndBillTest]
+2025-05-01T15:10:51.438-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 37, missCount = 2, failureCount = 0]
+2025-05-01T15:10:51.442-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] t.c.t.TransactionalTestExecutionListener : No method-level @Rollback override: using default rollback [true] for test method [void com.facturacion.facturacionapp.repositories.BillRepositoryTest.storeClientAndBillTest()]
+2025-05-01T15:10:51.444-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.facturacion.facturacionapp.repositories.BillRepositoryTest.storeClientAndBillTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-05-01T15:10:51.445-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1290739366&lt;open&gt;)] for JPA transaction
+2025-05-01T15:10:51.471-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4de3a1ca]
+2025-05-01T15:10:51.472-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test class [com.facturacion.facturacionapp.repositories.BillRepositoryTest]; test method [storeClientAndBillTest]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@24305eca]; rollback [true]
+2025-05-01T15:10:51.473-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 38, missCount = 2, failureCount = 0]
+2025-05-01T15:10:51.473-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 39, missCount = 2, failureCount = 0]
+2025-05-01T15:10:51.474-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 40, missCount = 2, failureCount = 0]
+2025-05-01T15:10:51.475-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 41, missCount = 2, failureCount = 0]
+2025-05-01T15:10:51.483-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1290739366&lt;open&gt;)] for JPA transaction
+2025-05-01T15:10:51.483-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: insert into clients (address,name,phone,id) values (?,?,?,default)
+2025-05-01T15:10:51.741-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1290739366&lt;open&gt;)] for JPA transaction
+2025-05-01T15:10:51.741-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: insert into veterinary_services (description,name,price,id) values (?,?,?,default)
+2025-05-01T15:10:51.821-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1290739366&lt;open&gt;)] for JPA transaction
+2025-05-01T15:10:51.822-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: insert into bills (client_id,payed,total,id) values (?,?,?,default)
+2025-05-01T15:10:51.892-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1290739366&lt;open&gt;)] for JPA transaction
+2025-05-01T15:10:51.893-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: insert into bill_details (bill_id,quantity,service_id,subtotal,id) values (?,?,?,?,default)
+2025-05-01T15:10:51.978-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1290739366&lt;open&gt;)] for JPA transaction
+2025-05-01T15:10:51.979-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2025-05-01T15:10:52.000-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 42, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.001-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 43, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.002-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 44, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.003-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 45, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.003-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 46, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.003-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 47, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.004-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 48, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.004-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 49, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.005-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2025-05-01T15:10:52.006-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(1290739366&lt;open&gt;)]
+2025-05-01T15:10:52.041-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1290739366&lt;open&gt;)] after transaction
+2025-05-01T15:10:52.042-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction (1) for test class [com.facturacion.facturacionapp.repositories.BillRepositoryTest]; test method [storeClientAndBillTest]
+2025-05-01T15:10:52.042-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test method: class [BillRepositoryTest], method [storeClientAndBillTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T15:10:52.043-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 50, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.043-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 51, missCount = 2, failureCount = 0]
+2025-05-01T15:10:52.043-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test class: class [BillRepositoryTest], class annotated with @DirtiesContext [false] with mode [null]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.13</a> at 01-05-2025 15:10:52</p>
+</div>
+</div>
+</body>
+</html>

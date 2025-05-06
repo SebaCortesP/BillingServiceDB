@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.facturacion.facturacionapp.controllers.BillControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-05-01T19:10:44.785Z" hostname="SCORTES" time="0.768">
+  <properties/>
+  <testcase name="getBillByIdTest()" classname="com.facturacion.facturacionapp.controllers.BillControllerTest" time="0.738"/>
+  <testcase name="payBill_SuccessTest()" classname="com.facturacion.facturacionapp.controllers.BillControllerTest" time="0.025"/>
+  <system-out><![CDATA[15:10:38.969 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.facturacion.facturacionapp.controllers.BillControllerTest]: BillControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:10:39.233 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.facturacion.facturacionapp.FacturacionappApplication for test class com.facturacion.facturacionapp.controllers.BillControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-05-01T15:10:40.059-04:00  INFO 16740 --- [facturacionapp] [    Test worker] c.f.f.controllers.BillControllerTest     : Starting BillControllerTest using Java 21.0.6 with PID 16740 (started by sebas in C:\Users\sebas\DuocUC\Full Stack\Semana 8\BillingServiceDBTest)
+2025-05-01T15:10:40.063-04:00  INFO 16740 --- [facturacionapp] [    Test worker] c.f.f.controllers.BillControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T15:10:40.066-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.boot.SpringApplication               : Loading source class com.facturacion.facturacionapp.FacturacionappApplication
+2025-05-01T15:10:40.109-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@442f92e6
+2025-05-01T15:10:40.150-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2025-05-01T15:10:40.184-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2025-05-01T15:10:40.410-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\BillingServiceDBTest\build\classes\java\main\com\facturacion\facturacionapp\controllers\BillController.class]
+2025-05-01T15:10:41.216-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.context.ImportsContextCustomizer$ImportsCleanupPostProcessor'
+2025-05-01T15:10:41.227-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springSecurityHandlerMappingIntrospectorBeanDefinitionRegistryPostProcessor'
+2025-05-01T15:10:41.356-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+2025-05-01T15:10:42.521-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2025-05-01T15:10:42.526-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'preserveErrorControllerTargetClassPostProcessor'
+2025-05-01T15:10:42.527-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'conversionServicePostProcessor'
+2025-05-01T15:10:42.562-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2025-05-01T15:10:42.573-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2025-05-01T15:10:42.576-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2025-05-01T15:10:42.594-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2025-05-01T15:10:42.596-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+2025-05-01T15:10:42.598-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2025-05-01T15:10:42.598-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2025-05-01T15:10:42.619-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'methodValidationPostProcessor'
+2025-05-01T15:10:42.637-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'methodValidationPostProcessor' via factory method to bean named 'environment'
+2025-05-01T15:10:42.645-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2025-05-01T15:10:42.751-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'projectingArgumentResolverBeanPostProcessor'
+2025-05-01T15:10:42.835-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hypermediaRepresentionModelProcessorConfigurator'
+2025-05-01T15:10:42.837-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hypermediaRestTemplateBeanPostProcessor'
+2025-05-01T15:10:42.847-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.u.c.s.UiApplicationContextUtils      : Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@41bb1f09]
+2025-05-01T15:10:42.850-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.test.context.support.internalDynamicPropertyRegistrarBeanInitializer'
+2025-05-01T15:10:42.856-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'facturacionappApplication'
+2025-05-01T15:10:42.859-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'billController'
+2025-05-01T15:10:42.878-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'billController' via constructor to bean named 'com.facturacion.facturacionapp.services.BillService#0'
+2025-05-01T15:10:42.880-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'com.facturacion.facturacionapp.config.SecurityConfig'
+2025-05-01T15:10:42.885-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'securityFilterChain'
+2025-05-01T15:10:42.887-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration'
+2025-05-01T15:10:42.906-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'objectPostProcessor'
+2025-05-01T15:10:42.907-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration'
+2025-05-01T15:10:42.908-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'objectPostProcessor' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@285f38f6'
+2025-05-01T15:10:42.915-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration'
+2025-05-01T15:10:42.919-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'enableGlobalAuthenticationAutowiredConfigurer'
+2025-05-01T15:10:42.921-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'enableGlobalAuthenticationAutowiredConfigurer' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:42.928-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'initializeUserDetailsBeanManagerConfigurer'
+2025-05-01T15:10:42.929-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'initializeUserDetailsBeanManagerConfigurer' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:42.931-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'initializeAuthenticationProviderBeanManagerConfigurer'
+2025-05-01T15:10:42.931-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'initializeAuthenticationProviderBeanManagerConfigurer' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:42.940-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcContentNegotiationManager'
+2025-05-01T15:10:42.941-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration'
+2025-05-01T15:10:42.943-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T15:10:42.947-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2025-05-01T15:10:42.991-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-05-01T15:10:43.002-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T15:10:43.003-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-05-01T15:10:43.003-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@285f38f6'
+2025-05-01T15:10:43.020-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter'
+2025-05-01T15:10:43.027-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-05-01T15:10:43.027-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T15:10:43.027-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@285f38f6'
+2025-05-01T15:10:43.035-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration'
+2025-05-01T15:10:43.037-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.047-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hypermediaWebMvcConfigurer'
+2025-05-01T15:10:43.048-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.WebMvcHateoasConfiguration'
+2025-05-01T15:10:43.049-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hypermediaWebMvcConverters'
+2025-05-01T15:10:43.050-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.HateoasConfiguration'
+2025-05-01T15:10:43.056-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration'
+2025-05-01T15:10:43.059-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean '_relProvider'
+2025-05-01T15:10:43.061-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'relProviderPluginRegistry'
+2025-05-01T15:10:43.062-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'relProviderPluginRegistry' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.095-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name '_relProvider' via factory method to bean named 'relProviderPluginRegistry'
+2025-05-01T15:10:43.100-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'messageResolver'
+2025-05-01T15:10:43.121-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' via constructor to bean named '_relProvider'
+2025-05-01T15:10:43.121-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' via constructor to bean named 'messageResolver'
+2025-05-01T15:10:43.122-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@285f38f6'
+2025-05-01T15:10:43.131-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'hypermediaWebMvcConverters' via factory method to bean named 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration'
+2025-05-01T15:10:43.139-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonObjectMapper'
+2025-05-01T15:10:43.140-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration'
+2025-05-01T15:10:43.142-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration'
+2025-05-01T15:10:43.145-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'standardJacksonObjectMapperBuilderCustomizer'
+2025-05-01T15:10:43.145-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration'
+2025-05-01T15:10:43.147-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2025-05-01T15:10:43.160-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'standardJacksonObjectMapperBuilderCustomizer' via factory method to bean named 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2025-05-01T15:10:43.164-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'parameterNamesModule'
+2025-05-01T15:10:43.164-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration'
+2025-05-01T15:10:43.179-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonMixinModule'
+2025-05-01T15:10:43.180-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration'
+2025-05-01T15:10:43.182-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonMixinModuleEntries'
+2025-05-01T15:10:43.182-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModuleEntries' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.183-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2025-05-01T15:10:43.186-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.facturacion.facturacionapp'. Automatic @Repository and @Entity scanning is enabled.
+2025-05-01T15:10:43.206-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.206-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'jsonMixinModuleEntries'
+2025-05-01T15:10:43.211-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonComponentModule'
+2025-05-01T15:10:43.211-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration'
+2025-05-01T15:10:43.225-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonGeoModule'
+2025-05-01T15:10:43.225-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration'
+2025-05-01T15:10:43.228-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springDataWebSettings'
+2025-05-01T15:10:43.229-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration'
+2025-05-01T15:10:43.230-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties'
+2025-05-01T15:10:43.234-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration' via constructor to bean named 'spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties'
+2025-05-01T15:10:43.250-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pageModule'
+2025-05-01T15:10:43.259-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.259-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'standardJacksonObjectMapperBuilderCustomizer'
+2025-05-01T15:10:43.264-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapper' via factory method to bean named 'jacksonObjectMapperBuilder'
+2025-05-01T15:10:43.293-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'hypermediaWebMvcConfigurer' via factory method to bean named 'hypermediaWebMvcConverters'
+2025-05-01T15:10:43.300-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration'
+2025-05-01T15:10:43.326-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'authenticationManagerBuilder'
+2025-05-01T15:10:43.327-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'authenticationManagerBuilder' via factory method to bean named 'objectPostProcessor'
+2025-05-01T15:10:43.327-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'authenticationManagerBuilder' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.330-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'authenticationEventPublisher'
+2025-05-01T15:10:43.331-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration'
+2025-05-01T15:10:43.332-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'authenticationEventPublisher' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.357-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$WebSecurityEnablerConfiguration'
+2025-05-01T15:10:43.362-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'inMemoryUserDetailsManager'
+2025-05-01T15:10:43.363-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration'
+2025-05-01T15:10:43.366-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties'
+2025-05-01T15:10:43.371-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'inMemoryUserDetailsManager' via factory method to bean named 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties'
+2025-05-01T15:10:43.378-04:00  WARN 16740 --- [facturacionapp] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d4df9b17-1808-42c2-87ad-831e74b575e0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-01T15:10:43.435-04:00  INFO 16740 --- [facturacionapp] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-01T15:10:43.547-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'securityFilterChain' via factory method to bean named 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity'
+2025-05-01T15:10:43.565-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webAuthorizationManagerPostProcessor'
+2025-05-01T15:10:43.589-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'authenticationManagerPostProcessor'
+2025-05-01T15:10:43.629-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-01T15:10:43.630-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration'
+2025-05-01T15:10:43.631-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'threadPoolTaskExecutorBuilder'
+2025-05-01T15:10:43.633-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2025-05-01T15:10:43.638-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'threadPoolTaskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2025-05-01T15:10:43.645-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration'
+2025-05-01T15:10:43.647-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration' via constructor to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2025-05-01T15:10:43.648-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleAsyncTaskExecutorBuilder'
+2025-05-01T15:10:43.652-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration'
+2025-05-01T15:10:43.653-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2025-05-01T15:10:43.654-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration'
+2025-05-01T15:10:43.655-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultValidator'
+2025-05-01T15:10:43.656-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'defaultValidator' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.681-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration'
+2025-05-01T15:10:43.683-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'error'
+2025-05-01T15:10:43.684-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'beanNameViewResolver'
+2025-05-01T15:10:43.687-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration'
+2025-05-01T15:10:43.690-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.691-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-05-01T15:10:43.692-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration'
+2025-05-01T15:10:43.693-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-05-01T15:10:43.731-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-05-01T15:10:43.732-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorAttributes'
+2025-05-01T15:10:43.737-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'basicErrorController'
+2025-05-01T15:10:43.738-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'basicErrorController' via factory method to bean named 'errorAttributes'
+2025-05-01T15:10:43.744-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorPageCustomizer'
+2025-05-01T15:10:43.745-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dispatcherServletPath'
+2025-05-01T15:10:43.745-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration'
+2025-05-01T15:10:43.747-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dispatcherServletPath' via factory method to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T15:10:43.750-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorPageCustomizer' via factory method to bean named 'dispatcherServletPath'
+2025-05-01T15:10:43.752-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'welcomePageHandlerMapping'
+2025-05-01T15:10:43.753-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcConversionService'
+2025-05-01T15:10:43.771-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcResourceUrlProvider'
+2025-05-01T15:10:43.774-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.775-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T15:10:43.775-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T15:10:43.812-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'welcomePageNotAcceptableHandlerMapping'
+2025-05-01T15:10:43.813-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:43.814-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T15:10:43.814-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T15:10:43.821-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'localeResolver'
+2025-05-01T15:10:43.825-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'themeResolver'
+2025-05-01T15:10:43.829-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'flashMapManager'
+2025-05-01T15:10:43.837-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewNameTranslator'
+2025-05-01T15:10:43.840-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcValidator'
+2025-05-01T15:10:43.845-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerMapping'
+2025-05-01T15:10:43.846-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T15:10:43.846-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T15:10:43.847-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T15:10:43.958-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-05-01T15:10:43.959-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcPatternParser'
+2025-05-01T15:10:43.961-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcUrlPathHelper'
+2025-05-01T15:10:43.962-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcPathMatcher'
+2025-05-01T15:10:43.964-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewControllerHandlerMapping'
+2025-05-01T15:10:43.965-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T15:10:43.966-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T15:10:43.967-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'beanNameHandlerMapping'
+2025-05-01T15:10:43.968-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T15:10:43.968-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T15:10:43.971-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'routerFunctionMapping'
+2025-05-01T15:10:43.972-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T15:10:43.973-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T15:10:43.975-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'messageConverters'
+2025-05-01T15:10:43.975-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration'
+2025-05-01T15:10:43.982-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'stringHttpMessageConverter'
+2025-05-01T15:10:43.983-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration'
+2025-05-01T15:10:43.983-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'stringHttpMessageConverter' via factory method to bean named 'environment'
+2025-05-01T15:10:43.990-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mappingJackson2HttpMessageConverter'
+2025-05-01T15:10:43.991-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration'
+2025-05-01T15:10:43.992-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mappingJackson2HttpMessageConverter' via factory method to bean named 'jacksonObjectMapper'
+2025-05-01T15:10:44.072-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationJsonHalConfiguration'
+2025-05-01T15:10:44.072-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration'
+2025-05-01T15:10:44.113-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'resourceHandlerMapping'
+2025-05-01T15:10:44.115-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T15:10:44.115-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T15:10:44.115-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T15:10:44.162-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-01T15:10:44.163-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultServletHandlerMapping'
+2025-05-01T15:10:44.163-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerAdapter'
+2025-05-01T15:10:44.165-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T15:10:44.165-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcConversionService'
+2025-05-01T15:10:44.165-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcValidator'
+2025-05-01T15:10:44.184-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'sortResolver'
+2025-05-01T15:10:44.195-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'sortCustomizer'
+2025-05-01T15:10:44.208-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pageableResolver'
+2025-05-01T15:10:44.214-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pageableCustomizer'
+2025-05-01T15:10:44.217-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pagedResourcesAssemblerArgumentResolver'
+2025-05-01T15:10:44.219-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'slicedResourcesAssemblerArgumentResolver'
+2025-05-01T15:10:44.239-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationTaskExecutor'
+2025-05-01T15:10:44.240-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'applicationTaskExecutor' via factory method to bean named 'threadPoolTaskExecutorBuilder'
+2025-05-01T15:10:44.255-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2025-05-01T15:10:44.282-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-01T15:10:44.322-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcViewResolver'
+2025-05-01T15:10:44.323-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mvcViewResolver' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T15:10:44.328-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultViewResolver'
+2025-05-01T15:10:44.335-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewResolver'
+2025-05-01T15:10:44.336-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewResolver' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@285f38f6'
+2025-05-01T15:10:44.340-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewResolver'
+2025-05-01T15:10:44.356-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'handlerFunctionAdapter'
+2025-05-01T15:10:44.364-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcUriComponentsContributor'
+2025-05-01T15:10:44.365-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mvcUriComponentsContributor' via factory method to bean named 'mvcConversionService'
+2025-05-01T15:10:44.365-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mvcUriComponentsContributor' via factory method to bean named 'requestMappingHandlerAdapter'
+2025-05-01T15:10:44.367-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'httpRequestHandlerAdapter'
+2025-05-01T15:10:44.368-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleControllerHandlerAdapter'
+2025-05-01T15:10:44.370-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'handlerExceptionResolver'
+2025-05-01T15:10:44.370-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'handlerExceptionResolver' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T15:10:44.376-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-01T15:10:44.386-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestContextFilter'
+2025-05-01T15:10:44.392-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration'
+2025-05-01T15:10:44.393-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'formContentFilter'
+2025-05-01T15:10:44.395-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration'
+2025-05-01T15:10:44.396-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.web.config.ProjectingArgumentResolverRegistrar'
+2025-05-01T15:10:44.397-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pagedResourcesAssembler'
+2025-05-01T15:10:44.409-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'slicedResourcesAssembler'
+2025-05-01T15:10:44.412-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'offsetResolver'
+2025-05-01T15:10:44.418-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'halLinkDisocoverer'
+2025-05-01T15:10:44.423-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.WebTestHateoasConfiguration'
+2025-05-01T15:10:44.423-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultRelProvider'
+2025-05-01T15:10:44.426-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'annotationRelProvider'
+2025-05-01T15:10:44.428-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'linkDiscoverers'
+2025-05-01T15:10:44.429-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'linkDiscovererRegistry'
+2025-05-01T15:10:44.434-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'linkDiscoverers' via factory method to bean named 'linkDiscovererRegistry'
+2025-05-01T15:10:44.435-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.WebMvcEntityLinksConfiguration'
+2025-05-01T15:10:44.436-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webMvcEntityLinks'
+2025-05-01T15:10:44.439-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webMvcLinkBuilderFactory'
+2025-05-01T15:10:44.453-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'entityLinksPluginRegistry'
+2025-05-01T15:10:44.453-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'entityLinksPluginRegistry' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:44.454-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'delegatingEntityLinks'
+2025-05-01T15:10:44.456-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'delegatingEntityLinks' via factory method to bean named 'entityLinksPluginRegistry'
+2025-05-01T15:10:44.458-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'representationModelProcessorInvoker'
+2025-05-01T15:10:44.461-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.RestTemplateHateoasConfiguration'
+2025-05-01T15:10:44.462-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration$HypermediaConfiguration'
+2025-05-01T15:10:44.463-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.hateoas-org.springframework.boot.autoconfigure.hateoas.HateoasProperties'
+2025-05-01T15:10:44.464-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration'
+2025-05-01T15:10:44.476-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'filterChainDecoratorPostProcessor'
+2025-05-01T15:10:44.478-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcHandlerMappingIntrospectorRequestTransformer'
+2025-05-01T15:10:44.479-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcHandlerMappingIntrospector'
+2025-05-01T15:10:44.491-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'delegatingApplicationListener'
+2025-05-01T15:10:44.492-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springSecurityFilterChain'
+2025-05-01T15:10:44.507-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webSecurityExpressionHandler'
+2025-05-01T15:10:44.508-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'privilegeEvaluator'
+2025-05-01T15:10:44.510-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestDataValueProcessor'
+2025-05-01T15:10:44.512-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.ObservationConfiguration'
+2025-05-01T15:10:44.513-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration'
+2025-05-01T15:10:44.514-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration'
+2025-05-01T15:10:44.515-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'securityFilterChainRegistration'
+2025-05-01T15:10:44.515-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'securityFilterChainRegistration' via factory method to bean named 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties'
+2025-05-01T15:10:44.522-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration'
+2025-05-01T15:10:44.522-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-05-01T15:10:44.523-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'characterEncodingFilter'
+2025-05-01T15:10:44.524-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'localeCharsetMappingsCustomizer'
+2025-05-01T15:10:44.528-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcConfiguration'
+2025-05-01T15:10:44.529-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcConfiguration' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@442f92e6'
+2025-05-01T15:10:44.529-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcConfiguration' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T15:10:44.530-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockMvcBuilder'
+2025-05-01T15:10:44.530-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springBootMockMvcBuilderCustomizer'
+2025-05-01T15:10:44.535-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'securityMockMvcBuilderCustomizer'
+2025-05-01T15:10:44.536-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration'
+2025-05-01T15:10:44.538-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvcBuilder' via factory method to bean named 'springBootMockMvcBuilderCustomizer'
+2025-05-01T15:10:44.538-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvcBuilder' via factory method to bean named 'securityMockMvcBuilderCustomizer'
+2025-05-01T15:10:44.552-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2025-05-01T15:10:44.552-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: 
+2025-05-01T15:10:44.567-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockMvc'
+2025-05-01T15:10:44.568-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvc' via factory method to bean named 'mockMvcBuilder'
+2025-05-01T15:10:44.656-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2025-05-01T15:10:44.657-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+2025-05-01T15:10:44.657-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+2025-05-01T15:10:44.657-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .DelegatingFilterProxyRegistrationBean$1 : Filter 'springSecurityFilterChain' configured for use
+2025-05-01T15:10:44.677-04:00  INFO 16740 --- [facturacionapp] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-05-01T15:10:44.677-04:00  INFO 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-05-01T15:10:44.679-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Detected AcceptHeaderLocaleResolver
+2025-05-01T15:10:44.679-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Detected FixedThemeResolver
+2025-05-01T15:10:44.680-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@39a8e2fa
+2025-05-01T15:10:44.681-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Detected org.springframework.web.servlet.support.SessionFlashMapManager@194037f9
+2025-05-01T15:10:44.682-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-01T15:10:44.682-04:00  INFO 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2025-05-01T15:10:44.693-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcTesterConfiguration'
+2025-05-01T15:10:44.694-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockMvcTester'
+2025-05-01T15:10:44.694-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvcTester' via factory method to bean named 'mockMvc'
+2025-05-01T15:10:44.702-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dispatcherServlet'
+2025-05-01T15:10:44.703-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dispatcherServlet' via factory method to bean named 'mockMvc'
+2025-05-01T15:10:44.727-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147483647
+2025-05-01T15:10:44.728-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'springBootLoggingLifecycle'
+2025-05-01T15:10:44.728-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2025-05-01T15:10:44.739-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   ErrorMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ErrorMvcAutoConfiguration#basicErrorController matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorController; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration#errorAttributes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
+      - @ConditionalOnProperty (server.error.whitelabel.enabled) matched (OnPropertyCondition)
+      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
+      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpEncodingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnProperty (server.servlet.encoding.enabled) matched (OnPropertyCondition)
+
+   HttpEncodingAutoConfiguration#characterEncodingFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+
+   HttpMessageConvertersAutoConfiguration#messageConverters matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.http.HttpMessageConverters; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.StringHttpMessageConverter' (OnClassCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HypermediaAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.hateoas.EntityModel', 'org.springframework.web.bind.annotation.RequestMapping', 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter', 'org.springframework.plugin.core.Plugin' (OnClassCondition)
+      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
+
+   HypermediaAutoConfiguration#applicationJsonHalConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+      - @ConditionalOnProperty (spring.hateoas.use-hal-as-default-json-media-type) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.hateoas.mediatype.hal.HalConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HypermediaAutoConfiguration.HypermediaConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.hateoas.client.LinkDiscoverers; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClassCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration#parameterNamesModule matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.module.paramnames.ParameterNamesModule; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+      - @ConditionalOnProperty (spring.mvc.converters.preferred-json-mapper=jackson) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found bean 'jacksonObjectMapper' (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration#mappingJackson2HttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter ignored: org.springframework.hateoas.server.mvc.TypeConstrainedMappingJackson2HttpMessageConverter,org.springframework.data.rest.webmvc.alps.AlpsJsonHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcAutoConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+
+   MockMvcAutoConfiguration#dispatcherServlet matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcAutoConfiguration#dispatcherServletPath matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcConfiguration#mockMvc matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.MockMvc; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcConfiguration#mockMvcBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.MockMvcBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcSecurityConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors' (OnClassCondition)
+
+   MockMvcSecurityConfiguration#securityMockMvcBuilderCustomizer matched:
+      - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found bean 'springSecurityFilterChain' (OnBeanCondition)
+
+   MockMvcTesterConfiguration matched:
+      - @ConditionalOnClass found required class 'org.assertj.core.api.Assert' (OnClassCondition)
+
+   MockMvcTesterConfiguration#mockMvcTester matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.assertj.MockMvcTester; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NoOpCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration NONE cache type (CacheCondition)
+
+   SecurityAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+
+   SecurityAutoConfiguration#authenticationEventPublisher matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationEventPublisher; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SecurityFilterAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer', 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   SecurityFilterAutoConfiguration#securityFilterChainRegistration matched:
+      - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found bean 'springSecurityFilterChain' (OnBeanCondition)
+
+   SpringBootWebSecurityConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.data.web.PageableHandlerMethodArgumentResolver', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.PageableHandlerMethodArgumentResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration#pageableCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.PageableHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration#sortCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SortHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration#springDataWebSettings matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SpringDataWebSettings; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.ObjectPostProcessor; SearchStrategy: all) found beans 'objectPostProcessor', 'webAuthorizationManagerPostProcessor', 'filterChainDecoratorPostProcessor', 'authenticationManagerPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.validation.executable.ExecutableValidator' (OnClassCondition)
+      - @ConditionalOnResource found location classpath:META-INF/services/jakarta.validation.spi.ValidationProvider (OnResourceCondition)
+
+   ValidationAutoConfiguration#defaultValidator matched:
+      - @ConditionalOnMissingBean (types: jakarta.validation.Validator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration#methodValidationPostProcessor matched:
+      - @ConditionalOnMissingBean (types: org.springframework.validation.beanvalidation.MethodValidationPostProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
+      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
+      - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   Cache2kCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
+
+   CacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) did not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+
+   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
+      Did not match:
+         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+
+   CaffeineCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
+
+   CouchbaseCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) did not find any beans of type org.springframework.web.servlet.DispatcherServlet (OnBeanCondition)
+
+   FreeMarkerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
+
+   GenericCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration unknown cache type (CacheCondition)
+
+   GroovyTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'groovy.text.markup.MarkupTemplateEngine' (OnClassCondition)
+
+   GsonAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   GsonHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   HazelcastCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   InfinispanCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
+
+   JCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JsonbAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   JsonbHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   MockMvcAutoConfiguration.WebTestClientMockMvcConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   MockMvcWebClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.htmlunit.WebClient' (OnClassCondition)
+
+   MockMvcWebDriverAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.openqa.selenium.htmlunit.HtmlUnitDriver' (OnClassCondition)
+
+   MustacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.samskivert.mustache.Mustache' (OnClassCondition)
+
+   OAuth2ClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.ClientRegistration' (OnClassCondition)
+
+   OAuth2ResourceServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.resource.authentication.BearerTokenAuthenticationToken' (OnClassCondition)
+
+   RedisCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   SecurityDataConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.data.repository.query.SecurityEvaluationContextExtension' (OnClassCondition)
+
+   SimpleCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration unknown cache type (CacheCondition)
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuilder (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   ThymeleafAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.thymeleaf.spring6.SpringTemplateEngine' (OnClassCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.problemdetails.enabled=true) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+   WebTestClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-05-01T15:10:44.763-04:00  INFO 16740 --- [facturacionapp] [    Test worker] c.f.f.controllers.BillControllerTest     : Started BillControllerTest in 5.381 seconds (process running for 7.426)
+2025-05-01T15:10:44.771-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1, failureCount = 0]
+2025-05-01T15:10:44.775-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.facturacion.facturacionapp.controllers.BillControllerTest
+2025-05-01T15:10:44.775-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1, failureCount = 0]
+2025-05-01T15:10:44.783-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1, failureCount = 0]
+2025-05-01T15:10:44.793-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test method: class [BillControllerTest], method [getBillByIdTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T15:10:44.798-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1, failureCount = 0]
+2025-05-01T15:10:44.801-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1, failureCount = 0]
+2025-05-01T15:10:44.809-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1, failureCount = 0]
+2025-05-01T15:10:44.809-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1, failureCount = 0]
+2025-05-01T15:10:44.813-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 7, missCount = 1, failureCount = 0]
+2025-05-01T15:10:44.820-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 8, missCount = 1, failureCount = 0]
+2025-05-01T15:10:44.887-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@2e19b30}
+2025-05-01T15:10:44.888-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@2e19b30}
+2025-05-01T15:10:44.889-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Getting field 'securityContextRepository' from target object [org.springframework.security.web.context.SecurityContextHolderFilter@70139a81] or target class [class org.springframework.security.web.context.SecurityContextHolderFilter]
+2025-05-01T15:10:44.890-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@2e19b30}
+2025-05-01T15:10:44.890-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@2e19b30}
+2025-05-01T15:10:44.891-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Setting field 'securityContextRepository' of type [null] on target object [org.springframework.security.web.context.SecurityContextHolderFilter@70139a81] or target class [class org.springframework.security.web.context.SecurityContextHolderFilter] to value [org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors$SecurityContextRequestPostProcessorSupport$TestSecurityContextRepository@6159fb3c]
+2025-05-01T15:10:44.901-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-05-01T15:10:44.904-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@6f17dd06]
+2025-05-01T15:10:44.944-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.security.web.FilterChainProxy        : Securing GET /bills/1
+2025-05-01T15:10:44.960-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.security.web.FilterChainProxy        : Secured GET /bills/1
+2025-05-01T15:10:44.968-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : GET "/bills/1", parameters={}
+2025-05-01T15:10:44.971-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.facturacion.facturacionapp.controllers.BillController#getBillById(Long)
+2025-05-01T15:10:45.357-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/hal+json', given [*/*] and supported [application/hal+json, application/json, application/*+json]
+2025-05-01T15:10:45.366-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [EntityModel { content: links: [], links: [<http://localhost/bills/1>;rel="self", <http://localhost/b (truncated)...]
+2025-05-01T15:10:45.418-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed 200 OK
+2025-05-01T15:10:45.421-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-05-01T15:10:45.503-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 9, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.504-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 10, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.505-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 11, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.506-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 12, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.507-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 13, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.507-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 14, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.510-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 15, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.510-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 16, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.511-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test method: class [BillControllerTest], method [getBillByIdTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T15:10:45.525-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 17, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.526-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.facturacion.facturacionapp.controllers.BillControllerTest
+2025-05-01T15:10:45.526-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 18, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.527-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 19, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.529-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test method: class [BillControllerTest], method [payBill_SuccessTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T15:10:45.530-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 20, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.531-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 21, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.531-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 22, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.531-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 23, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.533-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 24, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.534-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 25, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.536-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@6f1163f7}
+2025-05-01T15:10:45.537-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@6f1163f7}
+2025-05-01T15:10:45.537-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Getting field 'securityContextRepository' from target object [org.springframework.security.web.context.SecurityContextHolderFilter@70139a81] or target class [class org.springframework.security.web.context.SecurityContextHolderFilter]
+2025-05-01T15:10:45.537-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-05-01T15:10:45.537-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@e4348c0]
+2025-05-01T15:10:45.538-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.security.web.FilterChainProxy        : Securing PUT /bills/1/pay
+2025-05-01T15:10:45.538-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.security.web.FilterChainProxy        : Secured PUT /bills/1/pay
+2025-05-01T15:10:45.538-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : PUT "/bills/1/pay", parameters={}
+2025-05-01T15:10:45.539-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.facturacion.facturacionapp.controllers.BillController#payBill(Long)
+Respuesta del servicio payBill: Optional[Factura pagada correctamente]
+2025-05-01T15:10:45.544-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/hal+json', given [*/*] and supported [application/hal+json, application/json, application/*+json]
+2025-05-01T15:10:45.545-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [EntityModel { content: com.facturacion.facturacionapp.config.MessageResponse@47f39279, links: [<http (truncated)...]
+2025-05-01T15:10:45.547-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed 200 OK
+2025-05-01T15:10:45.547-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-05-01T15:10:45.549-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 26, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.549-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 27, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.550-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 28, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.551-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 29, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.551-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 30, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.551-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 31, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.552-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 32, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.552-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 33, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.552-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test method: class [BillControllerTest], method [payBill_SuccessTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T15:10:45.556-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 34, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.557-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@26712838 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 35, missCount = 1, failureCount = 0]
+2025-05-01T15:10:45.557-04:00 DEBUG 16740 --- [facturacionapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test class: class [BillControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\sebas\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
